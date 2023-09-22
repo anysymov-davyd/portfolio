@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
+// Including a dependency for the slider
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -7,8 +8,20 @@ import 'slick-carousel/slick/slick-theme.css'
 import './../styles/Works.css'
 
 const Works = ({ localization, works }) => {
+    const [showHint, setShowHint] = useState(true)
+    // This useState is used to hide slider for 2 seconds after launching the site 
     const [showComponent, setShowComponent] = useState(false)
+    // Amount of works to show, which dependens on window width
+    const [slidesToShow, setSlidesToShow] = useState(window.innerWidth > 880 ? 4 : window.innerWidth > 640 ? 3 : window.innerWidth > 350 ? 2 : 1)
+    // This useState is used to understand how far is user swiping, so this way defines is user clicking or swiping
+    const [mouseOffset, setMouseOffset] = useState(0)
 
+    // Update amount of works to show
+    window.onresize = () => {
+        setSlidesToShow(window.innerWidth > 880 ? 4 : window.innerWidth > 640 ? 3 : window.innerWidth > 350 ? 2 : 1)
+    }
+
+    // Hide the slider for 2 second after launching the site
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowComponent(true)
@@ -19,18 +32,20 @@ const Works = ({ localization, works }) => {
         }
     }, [])
 
+    // Configuration for the slider
     const settings = {
         infinite: false,
         speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: slidesToShow,
+        slidesToScroll: slidesToShow,
         arrows: false
     }
 
+    // Fill empty places in the slider with label "NO WORK"
     const empty = () => {
         if(works.length > 3) return
         let items = []
-        for(let i = 0; i < 4 - works.length; ++i){
+        for(let i = 0; i < slidesToShow - works.length; ++i){
             items.push(
                 <div key={i} className='works__item'>
                     <a className='works__item-title caps2 works__no-work'>{ localization.no_work }</a>
@@ -45,17 +60,24 @@ const Works = ({ localization, works }) => {
             <div className="works__header">
                 <h2>{ localization.title }</h2>
                 <p>{ localization.paragraph }</p>
+                <div className='caps2 hint' style={{ opacity: showHint ? 1 : 0 }}>Scroll</div>
             </div>
             {showComponent ? (
             <Slider {...settings} className="works__slider">
                 {works.map((elem, index) => (
                     <div
-                        onClick={
+                        onPointerMove={() => setShowHint(false)}
+                        onMouseDown={e => {
+                            setMouseOffset(e.pageX)
+                        }}
+                        onMouseUp={
                             e => {
-                                if(e.target.className.split(' ')[0] === 'works__item-link'){
-                                    window.open(elem.data.github)
-                                } else {
-                                    window.open(elem.data.url)
+                                if(e.pageX - mouseOffset === 0){
+                                    if(e.target.className.split(' ')[0] === 'works__item-link'){
+                                        window.open(elem.data.github)
+                                    } else {
+                                        window.open(elem.data.url)
+                                    }
                                 }
                             }
                         }

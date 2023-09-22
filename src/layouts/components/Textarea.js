@@ -15,6 +15,7 @@ function Textarea(props) {
         const newValue = event.target.value
         if (/^\s/.test(newValue) || /\s{2,}/.test(newValue) || newValue.length > max) return
         setInputValue(newValue)
+        props.onChange(newValue)
     }
 
     const handlePaste = (event) => {
@@ -35,7 +36,7 @@ function Textarea(props) {
     const handleDrop = event => {
         event.preventDefault()
         setFileSet(event.dataTransfer.files)
-        console.log(event.dataTransfer.files)
+        props.onFilesDrop(event.dataTransfer.files)
         setIsDroppingFile(false)
     }
 
@@ -63,6 +64,7 @@ function Textarea(props) {
                     onChange={handleInputChange}
                     onPaste={handlePaste}
                     onKeyDown={disableEnter}
+                    spellCheck="false"
                 />
                 <div
                     onDragOver={handleDragOver}

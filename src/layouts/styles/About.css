@@ -15,8 +15,8 @@
 .about__languages{
     display: flex;
     flex-direction: row;
-    gap: 48px;   
-    width: 355px;
+    gap: 48px;
+    white-space: nowrap;
 }
 
 .about__language-names, .about__levels{
@@ -65,7 +65,7 @@
 }
 
 .about__second-column{
-    width: 580px;
+    max-width: 580px;
     display: flex;
     flex-direction: column;
     gap: 80px;

@@ -1,7 +1,7 @@
 .works__container{
     display: flex;
     flex-direction: column;
-    gap: 120px;
+    gap: 80px;
     transition: .2s;
 }
 
@@ -9,7 +9,6 @@
     display: grid;
     grid-template-columns: 1fr minmax(0, 800px);
     gap: 60px;
-    height: 80px;
 }
 
 .works__item{
@@ -62,14 +61,14 @@
     flex-direction: row;
 }
 
-.works__slider{
-    width: calc(100% + 20px);
-}
-
 .works__no-work{
     display: flex;
     height: 100%;
     align-items: center;
     justify-content: center;
     background: repeating-linear-gradient( -45deg, rgba(255,255,255,0.025), rgba(255,255,255,0.025) 5px, transparent 5px, transparent 30px );
+}
+
+.works__slider {
+    width: calc(100% + 20px)
 }

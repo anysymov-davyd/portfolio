@@ -10,6 +10,7 @@ const cv_url = {
 }
 
 function About({ localization, languageId }){
+    // A function to download CV
     const handleOpenPDF = langId => {
         window.open(cv_url[langId])
     }

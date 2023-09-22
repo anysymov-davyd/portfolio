@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import './../styles/Dropdown.css'
 
-function Dropdown({ placeholder, optionSet = [], onChoosedMethod }){
+function Dropdown({ placeholder, optionSet = [], onChoosedMethod, onChange }){
     const ITEM_HEIGHT = 56 // in pixels
     const [isOpened, handleIsOpened] = useState(false)
     const [currentOption, handleCurrenOption] = useState('')
 
     const setCurrentOption = value => {
         handleCurrenOption(value)
+        onChange(value)
         if(onChoosedMethod !== undefined) onChoosedMethod(value)
         handleIsOpened(false)
     }

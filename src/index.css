@@ -31,6 +31,40 @@ html, body {
   height: 100%;
 }
 
+.hint {
+  display: inline-flex;
+  position: absolute;
+  left: calc(100% - 96px);
+  transition: .2s;
+}
+
+.hint::after {
+  display: block;
+  content: '⟶';
+  font-size: 24px;
+  animation: hint 1s infinite;
+  color: white;
+  margin-top: -3px;
+}
+
+@keyframes hint {
+  from {
+    opacity: 0;
+    margin-left: -100px;
+  }
+  25% {
+    opacity: 1;
+    margin-left: -5px;
+  }
+  75% {
+    margin-left: 0;
+  }
+  to {
+    opacity: 0;
+    margin-left: 0;
+  }
+}
+
 .background{
   position: fixed;
   width: 100vw;
@@ -38,7 +72,7 @@ html, body {
   bottom: 0;
   right: 0;
   border: 0;
-  transition: .2s;
+  transition: .2s opacity;
   background: url('./img/jpg/background.jpg') no-repeat;
   background-size: cover;
 }

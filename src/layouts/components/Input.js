@@ -9,6 +9,7 @@ function Input(props){
         const newValue = event.target.value
         if (/^\s/.test(newValue) || /\s{2,}/.test(newValue) || newValue.length > max) return
         setInputValue(newValue)
+        props.onChange(newValue)
     }
 
     const handlePaste = (event) => {
@@ -33,7 +34,7 @@ function Input(props){
             style={{
                 padding: props.choosedMethod === null || props.choosedMethod === 'other' ? 0 : '0 24px'
             }}
-            
+            spellCheck="false"
         />
     )
 }

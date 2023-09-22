@@ -1,6 +1,6 @@
 const localization = {
     en: {
-        navigation_panel: ['Home', 'About', 'Services', 'Works', 'Contacts'],
+        navigation_panel: ['Home', 'About', 'Services', 'Works'],
         home: {
             title: 'Anysymov Davyd',
             subtitle: 'Web Developer'
@@ -84,7 +84,7 @@ const localization = {
         }
     },
     de: {
-        navigation_panel: [ 'Startseite', 'Über mich', 'Leistungen', 'Werke', 'Kontakte' ],
+        navigation_panel: [ 'Startseite', 'Über mich', 'Leistungen', 'Werke' ],
         home: {
             title: 'Anysymov Davyd',
             subtitle: 'Webentwickler'
@@ -108,7 +108,7 @@ const localization = {
                 first: 'Mein Name ist Davyd Anysymov und ich bin Webentwickler und UI-Designer. Ich bin auf die Erstellung benutzerfreundlicher Websites spezialisiert und lege großen Wert auf Benutzererfahrung und Benutzeroberflächendesign mit dem Ziel, ästhetisch ansprechende und intuitive Websites zu erstellen.',
                 second: 'Ursprünglich komme ich aus der Ukraine, wo ich meine Liebe zum Programmieren und Design entdeckt habe. Derzeit lebe ich in Deutschland, wo ich meine Fähigkeiten und Kenntnisse im sich ständig weiterentwickelnden Bereich der Webentwicklung weiter ausbaue.'
             },
-            button: 'Lebenslauf herunterladen',
+            button: 'CV herunterladen',
         },
         services: {
             title: 'Leistungen',
@@ -168,7 +168,7 @@ const localization = {
         }
     },
     ua: {
-        navigation_panel: [ 'Головна', 'Про мене', 'Послуги', 'Роботи', 'Контакти' ],
+        navigation_panel: [ 'Головна', 'Про мене', 'Послуги', 'Роботи' ],
         home: {
             title: 'Анисимов Давид',
             subtitle: 'Веб-розробник'
@@ -252,7 +252,7 @@ const localization = {
         }
     },
     ru: {
-        navigation_panel: [ 'Главная', 'Обо мне', 'Услуги', 'Работы', 'Контакты' ],
+        navigation_panel: [ 'Главная', 'Обо мне', 'Услуги', 'Работы' ],
         home: {
             title: 'Анисимов Давид',
             subtitle: 'Веб-разработчик'

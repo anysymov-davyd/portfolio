@@ -1,19 +1,19 @@
 .services__container{
     display: flex;
     flex-direction: column;
-    gap: 120px;
+    gap: 80px;
 }
 
 .services__grid{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    gap: 40px;
 }
 
 .services__item{
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 48px;
     max-width: 600px;
 }
 
@@ -21,7 +21,6 @@
     display: flex;
     flex-direction: row;
     gap: 24px;
-    height: 80px;
 }
 
 .services__icon{
