@@ -11,7 +11,6 @@ import Home from './layouts/screens/Home'
 import About from './layouts/screens/About'
 import Services from './layouts/screens/Services'
 import Works from './layouts/screens/Works'
-import Contact from './layouts/screens/Contacts'
 
 import NavigationPanel from './layouts/components/NavigationPanel'
 
@@ -51,7 +50,7 @@ const App = () => {
           images.push(itemRef)
         })
       })
-      getDocs(collection(db, 'works'))
+      getDocs(collection(db, 'portfolio'))
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
           let image = images.find(image => image['_location']['path_'].split('/')[image['_location']['path_'].split('/').length - 1].split('.')[0] === doc.data().image)
@@ -62,6 +61,7 @@ const App = () => {
         })
       })
       .then(() => {
+        console.log(items)
         setWorkList(items)
       })
       .catch(error => console.error(error))

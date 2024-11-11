@@ -74,7 +74,7 @@ const Works = ({ localization, works }) => {
                             e => {
                                 if(e.pageX - mouseOffset === 0){
                                     if(e.target.className.split(' ')[0] === 'works__item-link'){
-                                        window.open(elem.data.github)
+                                        window.open(elem.data.source)
                                     } else {
                                         window.open(elem.data.url)
                                     }
@@ -87,7 +87,7 @@ const Works = ({ localization, works }) => {
                         <div style={{ background: `url(${elem.image}) no-repeat`, backgroundSize: 'cover' }} className='works__item-background'>
                             <div className='works__item-container'>
                                 <a className='works__item-title caps1'>{ elem.data.name }</a>
-                                <a className='works__item-link text'>{ localization.see_on_github }</a>
+                                <a className='works__item-link text'>{ elem.data.type === 'application' ? localization.see_on_github : '' }</a>
                             </div>
                         </div>
                     </div>

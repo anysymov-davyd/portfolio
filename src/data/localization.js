@@ -44,7 +44,8 @@ const localization = {
             title: 'Works',
             paragraph: 'With a strong foundation in HTML, CSS, and JavaScript, I bring ideas to life by creating responsive and visually appealing websites. I am well-versed in front-end frameworks like React and Vue, allowing to build dynamic and interactive web applications.',
             no_work: 'No work',
-            see_on_github: 'See on GitHub'
+            see_on_github: 'See on GitHub',
+            see_on_figma: 'See on Figma'
         },
         contacts: {
             title: 'Contacts',
@@ -128,7 +129,8 @@ const localization = {
             title: 'Werke',
             paragraph: 'Mit fundierten Kenntnissen in HTML, CSS und JavaScript erwecke ich Ideen zum Leben, indem ich reaktionsfähige und optisch ansprechende Websites erstelle. Ich kenne mich gut mit Frontend-Frameworks wie React und Vue aus, mit denen ich dynamische und interaktive Webanwendungen erstellen kann.',
             no_work: 'Kein Werk',
-            see_on_github: 'Auf GitHub ansehen'
+            see_on_github: 'Auf GitHub ansehen',
+            see_on_figma: 'Auf Figma ansehen'
         },
         contacts: {
             title: 'Kontakte',
@@ -212,7 +214,8 @@ const localization = {
             title: 'Роботи',
             paragraph: 'Маючи міцну основу в HTML, CSS і JavaScript, я втілюю ідеї в життя, створюючи адаптивні та візуально привабливі веб-сайти. Я добре розумію такі інтерфейсні фреймворки, як React і Vue, що дозволяють створювати динамічні та інтерактивні веб-додатки.',
             no_work: 'Немає роботи',
-            see_on_github: 'Переглянути на GitHub'
+            see_on_github: 'Переглянути на GitHub',
+            see_on_figma: 'Переглянути на Figma'
         },
         contacts: {
             title: 'Контакти',
@@ -296,7 +299,8 @@ const localization = {
             title: 'Работы',
             paragraph: 'Имея прочную основу в HTML, CSS и JavaScript, я воплощаю идеи в жизнь, создавая адаптивные и визуально привлекательные веб-сайты. Я хорошо разбираюсь во внешних фреймворках, таких как React и Vue, позволяющих создавать динамические и интерактивные веб-приложения.',
             no_work: 'Нет работы',
-            see_on_github: 'Посмотреть в GitHub'
+            see_on_github: 'Перейти в GitHub',
+            see_on_figma: 'Просмотреть в Figma'
         },
         contacts: {
             title: 'Контакты',
